@@ -251,7 +251,7 @@ public class StickyGridHeadersBaseAdapterWrapper extends BaseAdapter {
     private FillerView getFillerView(View convertView, ViewGroup parent, View lastViewSeen) {
         FillerView fillerView;
         
-        if (convertView instanceOf FillerView) {
+        if (convertView instanceof FillerView) {
             fillerView = (FillerView)convertView;
         }
         else {
@@ -267,7 +267,7 @@ public class StickyGridHeadersBaseAdapterWrapper extends BaseAdapter {
             ViewGroup parent) {
         HeaderFillerView headerFillerView;
 
-        if (convertView instanceOf HeaderFillerView) {
+        if (convertView instanceof HeaderFillerView) {
             headerFillerView = (HeaderFillerView)convertView;
         }
         else {
