@@ -249,8 +249,12 @@ public class StickyGridHeadersBaseAdapterWrapper extends BaseAdapter {
     }
 
     private FillerView getFillerView(View convertView, ViewGroup parent, View lastViewSeen) {
-        FillerView fillerView = (FillerView)convertView;
-        if (fillerView == null) {
+        FillerView fillerView;
+        
+        if (convertView instanceof FillerView) {
+            fillerView = (FillerView)convertView;
+        }
+        else {
             fillerView = new FillerView(mContext);
         }
 
@@ -261,8 +265,12 @@ public class StickyGridHeadersBaseAdapterWrapper extends BaseAdapter {
 
     private HeaderFillerView getHeaderFillerView(int headerPosition, View convertView,
             ViewGroup parent) {
-        HeaderFillerView headerFillerView = (HeaderFillerView)convertView;
-        if (headerFillerView == null) {
+        HeaderFillerView headerFillerView;
+
+        if (convertView instanceof HeaderFillerView) {
+            headerFillerView = (HeaderFillerView)convertView;
+        }
+        else {
             headerFillerView = new HeaderFillerView(mContext);
         }
 
