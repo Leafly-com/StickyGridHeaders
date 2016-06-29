@@ -19,7 +19,6 @@
 
     <modules>
         <module>Library</module>
-        <module>Example</module>
     </modules>
 
     <scm>
